@@ -3,19 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Primeiro Site</title>
+    <title>Projeto Cerveja Acadêmica</title>
     <style>
+        /* Estilos básicos para deixar o site limpo e responsivo */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f9;
-            padding: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
         }
-        h1 { color: #333; }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #d35400;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+        }
+        /* Estilo do botão do Artigo */
+        .botao-download {
+            display: inline-block;
+            background-color: #e67e22;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        .botao-download:hover {
+            background-color: #d35400;
+        }
+        /* Grid para a Galeria de Fotos */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .item-galeria {
+            background: #f4f4f4;
+            border-radius: 6px;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .item-galeria img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* Mantém a proporção da foto sem distorcer */
+        }
+        .item-galeria p {
+            padding: 10px;
+            margin: 0;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <h1>Olá, Mundo!</h1>
-    <p>Meu site já está no ar graças ao GitHub Pages. 🚀</p>
+
+    <header>
+        <h1>Monitoramento e Produção de Cerveja</h1>
+        <p>Projeto desenvolvido no âmbito universitário de Engenharia</p>
+    </header>
+
+    <div class="container">
+
+        <!-- SEÇÃO 1: SOBRE O PROJETO -->
+        <section>
+            <h2>Sobre o Projeto</h2>
+            <p>Este espaço é dedicado à documentação do processo de fabricação de cerveja artesanal na faculdade, unindo conceitos teóricos, controle de variáveis (como temperatura e pH) e a prática de chão de fábrica simulada.</p>
+        </section>
+
+        <!-- SEÇÃO 2: ARTIGO CIENTÍFICO -->
+        <section>
+            <h2>Fundamentação & Artigo Científico</h2>
+            <p>Desenvolvemos um relatório técnico detalhado abordando a análise de dados, setup dos sensores e os resultados obtidos durante as etapas de brassagem e fermentação.</p>
+            <!-- Link para o PDF que você vai subir no GitHub -->
+            <a href="artigo.pdf" target="_blank" class="botao-download">📄 Acessar Artigo Científico (PDF)</a>
+        </section>
+
+        <!-- SEÇÃO 3: GALERIA DE FOTOS DO PROCESSO -->
+        <section>
+            <h2>Galeria de Produção</h2>
+            <p>Acompanhe abaixo as principais etapas do desenvolvimento prático do lote:</p>
+            
+            <div class="galeria">
+                <!-- Foto 1: Mostura/Brassagem -->
+                <div class="item-galeria">
+                    <img src="mostura.jpg" alt="Etapa de Mostura">
+                    <p>1. Mostura e Controle Térmico</p>
+                </div>
+
+                <!-- Foto 2: Fermentação -->
+                <div class="item-galeria">
+                    <img src="fermentacao.jpg" alt="Etapa de Fermentação">
+                    <p>2. Monitoramento da Fermentação</p>
+                </div>
+
+                <!-- Foto 3: Produto Final -->
+                <div class="item-galeria">
+                    <img src="produto-final.jpg" alt="Cerveja Pronta">
+                    <p>3. Análise do Produto Final</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
 </body>
 </html>
